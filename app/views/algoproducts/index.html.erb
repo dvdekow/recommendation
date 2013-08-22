@@ -1,12 +1,27 @@
-<h1>Tetapkan algoritma</h1>
-
-<% @products.each do |p| %>
+<h1>Daftar barang dengan algoritma</h1>
+<% @noalgo = @products %>
+<% @allalgoproducts = Algoproduct.all %>
 <ul>
-    <li><%= p.name %></li>
-    <li><%= p.desc %></li>
-    <li>Tetapkan algoritma :</li>
+<% @allalgoproducts.each do |g| %>
+  <li>
+  <%= link_to g.name, g %>
+  </li>
+  </br>
+<% end %>
 </ul>
+<!--
+<% @noalgo.each do |p| %>
+    <% @container = Algoproduct.new %>
+    <% @container.name = p.name %>
+    <% @container.desc = p.desc %>
+    <% @container.algo = "algo2" %>
+    <% @container.save %>
+    <ul>
+    <li><%= @container.name %></li>
+    <li><%= @container.desc %></li>
+    <li><%= @container.algo %></li>
+    </ul>
     </br>
 <% end %>
-
+-->
 <%= link_to "new set algorhytm", new_algoproduct_path %>
