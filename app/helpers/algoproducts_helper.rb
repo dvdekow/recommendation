@@ -1,0 +1,2 @@
+module AlgoproductsHelper
+end

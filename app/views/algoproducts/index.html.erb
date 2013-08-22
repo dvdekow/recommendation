@@ -1,0 +1,12 @@
+<h1>Tetapkan algoritma</h1>
+
+<% @products.each do |p| %>
+<ul>
+    <li><%= p.name %></li>
+    <li><%= p.desc %></li>
+    <li>Tetapkan algoritma :</li>
+</ul>
+    </br>
+<% end %>
+
+<%= link_to "new set algorhytm", new_algoproduct_path %>

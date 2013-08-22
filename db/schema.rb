@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130821110509) do
+ActiveRecord::Schema.define(:version => 20130822082736) do
+
+  create_table "algoproducts", :force => true do |t|
+    t.string   "algo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.text     "desc"
+  end
 
   create_table "products", :force => true do |t|
     t.string   "name"

@@ -1,0 +1,18 @@
+<%= form_for(@algoproduct) do |a| %>
+  <p>
+    <%= a.label :name %>
+    </br>
+    <%= a.text_field :name %>
+  </p>
+  <p>
+    <%= a.label :desc %>
+    </br>
+    <%= a.text_area :desc %>
+  </p>
+  <p>
+  	<%= a.label :algo %>
+    </br>
+  	<%= a.text_field :algo %>
+  </p>
+  <%= a.submit %>
+<% end %>
