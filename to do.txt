@@ -1,0 +1,2 @@
+1. Buat ajax untuk generate barang per algoritma
+2. Identifikasi on click

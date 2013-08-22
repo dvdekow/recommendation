@@ -1,2 +1,23 @@
 <h1>Product Rekomendasi</h1>
+<h3>List Product</h3>
+<ul>
+  <% @products.each do |p| %>
+    <li><%= link_to p.name, p %></li>
+  <% end %>
+</ul>
 <%= link_to "New Product", new_product_path %>
+<%= form_tag products_path, :method => :get, :remote => true do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+<div id="products">
+  <%= render @products %>
+</div>
+
+<h2>Rekomendasi yang ditawarkan</h2>
+<button type="button" onclick="myFunction()">Algoritma 1</button>
+<button type="button" onclick="myFunction()">Algoritma 2</button>
+<div id="recom">
+</div>

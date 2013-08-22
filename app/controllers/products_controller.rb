@@ -9,9 +9,13 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(params[:product])
-    @product.save
-    flash[:notice] = "Product berhasil dibuat."
-    redirect_to @product
+    if @product.save
+      flash[:notice] = "Product berhasil dibuat."
+      redirect_to @product
+    else
+      flash[:alert] = "Product gagal dibuat"
+      render :action => "new"
+    end
   end
 
   def show

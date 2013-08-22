@@ -13,3 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+function myFunction()
+{
+  alert("Hello World!");
+  //document.getElementById('recom').innerHTML = '<h1>Alg 1</h1>';
+  var xmlhttp;
+  if (window.XMLHttpRequest)
+    {
+      xmlhttp = new XMLHttpRequest();
+    }
+  else
+  	{
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  	}
+}
