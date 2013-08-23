@@ -16,7 +16,8 @@ class AlgoproductsController < ProductsController
 
   def show
     @algoproduct = Algoproduct.find(params[:id])
-    @algoproduct.click ="0"
-    @algoproduct.save
+    @addclick = Counter.new
+    @addclick.algo = @algoproduct.algo
+    @addclick.save
   end
 end

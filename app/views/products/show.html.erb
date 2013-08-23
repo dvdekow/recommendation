@@ -7,10 +7,14 @@
 </br>
 <%= link_to "New Product", new_product_path %>
 <h2>Rekomendasi yang ditawarkan</h2>
-<button type="button" onclick="myFunction()">Algoritma 1</button>
-<button type="button" onclick="myFunction()">Algoritma 2</button>
+<!--<button type="button" onclick="myFunction()">Algoritma 1</button>
+<button type="button" onclick="myFunction()">Algoritma 2</button>-->
 <div id="recom">
 </div>
 <h5>This is Test</h5>
 <%= link_to "Algo Product", algoproducts_path %>
 <%= link_to "New Algo Product", new_algoproduct_path %>
+</br>
+<%= link_to "Algoritma 1", {:action => "generate_algoritma1"}, {:remote => true, :id => "clk"} %>
+<div id="allclick">
+</div>
